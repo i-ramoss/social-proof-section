@@ -32,7 +32,7 @@ Your users should be able to:
 
 ## :paperclip: Links:
 
-- Solution URL:
+- Solution URL: https://www.frontendmentor.io/solutions/social-proof-section-7NDBBVf3uo
 - Live Site URL: https://i-ramoss.github.io/social-proof-section/
 
 ## :rocket: Built with:
