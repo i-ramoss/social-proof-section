@@ -1,0 +1,182 @@
+:root {
+  /* primary */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+
+  /* neutral */
+  --dark-greyish-magenta: hsl(303, 10%, 53%);
+  --light-greyish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+
+  font-family: "League Spartan", sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "presentation rating"
+    "customers-evaluation customers-evaluation";
+  align-items: center;
+  row-gap: 3.75rem;
+
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* presentation section */
+.presentation {
+  grid-area: presentation;
+}
+
+.presentation h1 {
+  font-size: 3.5rem;
+  color: var(--very-dark-magenta);
+
+  max-width: 14ch;
+  margin-bottom: 30px;
+}
+
+.presentation p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--dark-greyish-magenta);
+
+  max-width: 40ch;
+}
+
+/* rating  */
+.star-ratings {
+  grid-area: rating;
+}
+
+.star-ratings ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  width: 85%;
+
+  background-color: var(--light-greyish-magenta);
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+
+.rating:nth-child(2) {
+  margin-left: 5rem;
+}
+
+.rating:nth-child(3) {
+  margin-left: 10rem;
+}
+
+.rating .stars-container img {
+  margin-right: 0.3125rem;
+}
+
+.rating .stars-container img:last-child {
+  margin-right: 0;
+}
+
+.rating h2 {
+  font-size: 1rem;
+  color: var(--very-dark-magenta);
+}
+
+/* customer evaluation section */
+.customers-evaluation {
+  grid-area: customers-evaluation;
+}
+
+.customers-evaluation ul {
+  display: flex;
+  gap: 2rem;
+
+  width: 100%;
+}
+
+.customer-container {
+  /* width: 30%; */
+  padding: 2rem;
+
+  background-color: var(--very-dark-magenta);
+  border-radius: 0.5rem;
+}
+
+.customer-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+
+  margin-bottom: 2rem;
+}
+
+.customer-info h3 {
+  font-size: 1.125rem;
+  color: var(--white);
+
+  margin-bottom: 5px;
+}
+
+.customer-info p {
+  color: var(--soft-pink);
+  filter: opacity(0.8);
+}
+
+.customer-picture {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 50%;
+}
+
+.customer-evaluation {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--light-greyish-magenta);
+
+  max-width: 50ch;
+}
+
+.customer-evaluation::before {
+  content: '" ';
+}
+
+.customer-evaluation::after {
+  content: ' "';
+}
+
+.customer-container:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.customer-container:nth-child(3) {
+  margin-top: 2rem;
+}
