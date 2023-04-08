@@ -53,7 +53,7 @@ After your request is accepted and added to the project, you can delete your bra
 
 ## :key: License:
 
-This project in under MIT license, for more details check in [LICENSE][license]. <br>
+This project in under MIT license, for more details check in [LICENSE](https://github.com/i-ramoss/social-proof-section/blob/main/LICENSE). <br>
 Feel free to bring new features or fix problems, it will be a pleasure! 💜
 
 ---
