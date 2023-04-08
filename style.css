@@ -27,6 +27,8 @@ body {
   min-height: 100vh;
 
   font-family: "League Spartan", sans-serif;
+
+  overflow: hidden;
 }
 
 .container {
@@ -35,6 +37,7 @@ body {
   grid-template-areas:
     "presentation rating"
     "customers-evaluation customers-evaluation";
+  justify-content: center;
   align-items: center;
   row-gap: 3.75rem;
 
@@ -72,7 +75,7 @@ body {
 .star-ratings ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   gap: 1rem;
 }
 
@@ -81,19 +84,19 @@ body {
   align-items: center;
   gap: 2rem;
 
-  width: 85%;
+  width: 80%;
 
   background-color: var(--light-greyish-magenta);
   border-radius: 0.5rem;
   padding: 1rem 2rem;
 }
 
-.rating:nth-child(2) {
-  margin-left: 5rem;
+.rating:nth-child(1) {
+  margin-right: 8rem;
 }
 
-.rating:nth-child(3) {
-  margin-left: 10rem;
+.rating:nth-child(2) {
+  margin-right: 4rem;
 }
 
 .rating .stars-container img {
@@ -112,6 +115,8 @@ body {
 /* customer evaluation section */
 .customers-evaluation {
   grid-area: customers-evaluation;
+
+  width: 100%;
 }
 
 .customers-evaluation ul {
@@ -122,7 +127,7 @@ body {
 }
 
 .customer-container {
-  /* width: 30%; */
+  max-height: 230px;
   padding: 2rem;
 
   background-color: var(--very-dark-magenta);
@@ -180,3 +185,31 @@ body {
 .customer-container:nth-child(3) {
   margin-top: 2rem;
 }
+
+/* media queries */
+@media only screen and (max-width: 1024px) {
+  .container {
+    margin: 5px;
+  }
+
+  .rating {
+    width: 85%;
+  }
+
+  .rating:nth-child(1) {
+    margin-right: 4rem;
+  }
+
+  .rating:nth-child(2) {
+    margin-right: 2rem;
+  }
+
+  .customers-evaluation ul {
+    gap: 1rem;
+  }
+
+  .customer-info {
+    margin-bottom: 1rem;
+  }
+}
+
